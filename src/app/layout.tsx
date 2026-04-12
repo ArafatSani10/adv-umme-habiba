@@ -3,8 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/ui/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const valueSans = localFont({
   src: [
@@ -28,9 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", valueSans.variable, "font-sans", geist.variable)}>
-      <body className="min-h-full flex flex-col font-sans">
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${valueSans.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

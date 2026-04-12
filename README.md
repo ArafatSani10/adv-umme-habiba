@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+⚖️ Umme Habiba | Legal & Strategic Portfolio
+Advocate • Civil & Criminal Law Specialist • Legal Consultant
 
-## Getting Started
+🏛️ Professional Vision
+একটি হাই-পারফরম্যান্স ডিজিটাল প্ল্যাটফর্ম যা আইন পেশার আভিজাত্য এবং আধুনিকতাকে এক সুতায় গেঁথেছে। সিভিল এবং ক্রিমিনাল ল-এর জটিলতা নিরসনে উম্মে হাবিবার যে পেশাদারিত্ব, এই প্রজেক্টটি ঠিক সেই "Premium & Reliable" ইমেজটি ফুটিয়ে তোলার জন্য তৈরি করা হয়েছে। এটি কেবল একটি ওয়েবসাইট নয়, বরং একজন আইনজীবীর আস্থার প্রতিফলন।
 
-First, run the development server:
+🏗️ Engineering Architecture
+প্ল্যাটফর্মটি সর্বোচ্চ স্পিড এবং লাক্সারি ইউজার এক্সপেরিয়েন্সের জন্য লেটেস্ট টেকনিক্যাল স্ট্যাক ব্যবহার করে ইঞ্জিনিয়ার করা হয়েছে:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Next.js 16 (Turbopack): ব্লিডিং-এজ টেকনোলজি ব্যবহার করে দ্রুততম পেজ লোডিং এবং রাউটিং নিশ্চিত করা হয়েছে।
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tailwind CSS v4: একটি কাস্টম "Midnight Blue" ডিজাইন সিস্টেমের ইমপ্লিমেন্টেশন।
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Value Sans Pro: প্রফেশনাল ক্ল্যারিটি এবং প্রিমিয়াম লুকের জন্য ব্যবহৃত টাইপোগ্রাফি সুইট।
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Shadcn UI & GSAP: মার্জিত কম্পোনেন্ট এবং স্মুথ ট্রানজিশন যা সাইটকে একটি "Extra Modern" ভাইব দেয়।
 
-## Learn More
+📂 Legal Milestones
+হাই-স্টেক লিগ্যাল রিপ্রেজেন্টেশনের ওপর ফোকাস করে এই পোর্টফোলিওটি যা হাইলাইট করে:
 
-To learn more about Next.js, take a look at the following resources:
+Strategic Litigation: সিভিল এবং ক্রিমিনাল কেস হ্যান্ডলিংয়ের দীর্ঘ অভিজ্ঞতা এবং সফলতার গল্প।
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Expertise: লিগ্যাল অ্যাডভাইসরি, ড্রাফটিং এবং কোর্টরুম প্রসিডিউরে বিশেষ দক্ষতা।
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Modern Branding: একজন আইনজীবীর প্রথাগত ইমেজের বাইরে গিয়ে একটি ডিজিটাল-ফার্স্ট প্রফেশনাল আইডেন্টিটি।
 
-## Deploy on Vercel
+Dark-Mode Fluidity: প্রিমিয়াম ডার্ক ব্লু ইন্টারফেস যা দীর্ঘ সময় পড়ার জন্য আরামদায়ক এবং রুচিশীল।
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🛠️ Repository Anatomy
+Plaintext
+├── public/font       # Premium Typography (Value Sans Pro)
+├── src/app           # Core Application Logic (App Router)
+│   ├── layout.tsx    # Global Architecture & Theme Provider
+│   ├── page.tsx      # High-End Hero & Landing Experience
+│   └── globals.css   # Tailored Design Tokens (Tailwind v4)
+├── src/components/   # Reusable UI Architecture (Shadcn/ui)
+│   ├── navbar.tsx    # Glassmorphic Navigation System
+│   └── ui/           # Atomic Design Components
+└── tailwind.config.ts # Custom Theme & Brand Color Mapping
