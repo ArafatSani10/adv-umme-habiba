@@ -32,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${valueSans.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark" 
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           <main className="flex-1">{children}</main>
         </ThemeProvider>
