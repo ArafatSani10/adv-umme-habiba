@@ -49,7 +49,7 @@ const ContactUs = () => {
                                     <input
                                         name="name" value={formData.name} onChange={handleInputChange}
                                         className="w-full bg-transparent border border-input rounded-lg px-4 py-3 outline-none focus:ring-1 focus:ring-ring transition-all"
-                                        placeholder="Md. Arafat"
+                                        placeholder="Full Name"
                                     />
                                 </div>
                                 <div className="space-y-2">
