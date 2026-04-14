@@ -5,7 +5,13 @@ import Image from 'next/image'
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion'
 import { Scale, ShieldCheck, Gavel, Award, GraduationCap } from 'lucide-react'
 
-const StatItem = ({ stat, i, isVisible }) => {
+interface Stat {
+  label: string;
+  value: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const StatItem: React.FC<{ stat: Stat; i: number; isVisible: boolean }> = ({ stat, i, isVisible }) => {
   const number = parseInt(stat.value)
   const suffix = stat.value.replace(/\d+/g, '')
   const motionValue = useMotionValue(0)

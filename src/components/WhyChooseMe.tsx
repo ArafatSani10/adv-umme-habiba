@@ -4,6 +4,12 @@ import React, { useRef } from 'react'
 import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ShieldCheck, Zap, HeartHandshake, Fingerprint, Clock } from 'lucide-react'
 
+interface Reason {
+  title: string;
+  desc: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+}
+
 const reasons = [
     {
         title: "Uncompromising Integrity",
@@ -27,15 +33,13 @@ const reasons = [
     }
 ]
 
-// ৩ডি কার্ড কম্পোনেন্ট
-const Card3D = ({ reason, index, isInView }) => {
+const Card3D: React.FC<{ reason: Reason; index: number; isInView: boolean }> = ({ reason, index, isInView }) => {
     const x = useMotionValue(0)
     const y = useMotionValue(0)
 
     const mouseXSpring = useSpring(x)
     const mouseYSpring = useSpring(y)
 
-    // রোটেশন ক্যালকুলেশন
     const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"])
     const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"])
 
@@ -68,7 +72,7 @@ const Card3D = ({ reason, index, isInView }) => {
                 rotateX,
                 transformStyle: "preserve-3d",
             }}
-            className="relative p-8 md:p-10 bg-foreground/[0.03] border border-foreground/5 rounded-lg flex flex-col justify-between group hover:border-brand-peach/30 transition-colors duration-500 cursor-pointer"
+            className="relative p-8 md:p-10 bg-foreground/3 border border-foreground/5 rounded-lg flex flex-col justify-between group hover:border-brand-peach/30 transition-colors duration-500 cursor-pointer"
         >
             <div style={{ transform: "translateZ(50px)" }} className="space-y-6">
                 <div className="w-12 h-12 bg-brand-peach/10 rounded-lg flex items-center justify-center group-hover:bg-brand-peach group-hover:text-primary transition-all duration-500 shadow-lg">
@@ -82,7 +86,6 @@ const Card3D = ({ reason, index, isInView }) => {
                 </p>
             </div>
 
-            {/* ৩ডি শ্যাডো এবং লাইন */}
             <div
                 style={{ transform: "translateZ(20px)" }}
                 className="mt-8 h-0.5 w-0 bg-brand-peach group-hover:w-full transition-all duration-700 shadow-[0_0_15px_rgba(244,194,194,0.5)]"
@@ -100,7 +103,7 @@ export default function WhyChooseMe() {
             ref={ref}
             id="why-choose-me"
             className="min-h-screen w-full py-24 px-6 bg-background relative overflow-hidden"
-            style={{ perspective: "1500px" }} // সেকশনে প্রস্পেক্টিভ যোগ করা হয়েছে
+            style={{ perspective: "1500px" }} 
         >
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">

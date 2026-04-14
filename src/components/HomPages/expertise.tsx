@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion, useInView } from "framer-motion"
-import { ShieldCheck, Scale, FileText, Users, Gavel, Search } from "lucide-react"
+import { ShieldCheck, Scale, FileText, Gavel } from "lucide-react"
 
 const expertiseData = [
   {
@@ -32,18 +32,18 @@ export default function Expertise() {
   const isInView = useInView(ref, { amount: 0.1 })
 
   return (
-    <section 
+    <section
       ref={ref}
       className="relative min-h-screen w-full bg-background flex items-center justify-center py-20 md:py-0 px-2 overflow-hidden"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, rotateX: 20, y: 60, scale: 0.9 }}
         animate={isInView ? { opacity: 1, rotateX: 0, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="container mx-auto"
       >
         <div className="max-w-2xl mb-12 md:mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
@@ -51,11 +51,11 @@ export default function Expertise() {
           >
             Practice <span className="text-brand-peach">Areas</span>
           </motion.h2>
-          <motion.p 
-             initial={{ opacity: 0 }}
-             animate={isInView ? { opacity: 1 } : {}}
-             transition={{ delay: 0.4 }}
-             className="text-muted-foreground text-lg md:text-xl leading-relaxed"
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.4 }}
+            className="text-muted-foreground text-lg md:text-xl leading-relaxed"
           >
             Providing strategic legal solutions with a focus on integrity and client success.
           </motion.p>
@@ -79,7 +79,7 @@ export default function Expertise() {
                   {item.icon}
                 </motion.div>
               </div>
-              
+
               <h3 className="text-xl font-semibold text-foreground mb-3 relative z-10 group-hover:text-brand-peach transition-colors">
                 {item.title}
               </h3>
