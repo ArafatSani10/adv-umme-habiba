@@ -8,6 +8,8 @@ import Banner from "@/components/HomPages/Banner"
 import Expertise from "@/components/HomPages/expertise"
 import SuccessStories from "@/components/SuccessStories"
 import WhyChooseMe from "@/components/WhyChooseMe"
+import ContactUs from "@/components/ContactUs"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   const [chatOpen, setChatOpen] = React.useState(false)
@@ -72,8 +74,10 @@ export default function Home() {
       </section>
 
       <section id="contact" className="min-h-screen">
-        {/* Contact Content Here */}
+        <ContactUs />
       </section>
+
+      <Footer />
 
       {/* Scroll to Top Button */}
       <motion.button
@@ -95,7 +99,7 @@ export default function Home() {
         transition={{ delay: 1.2, duration: 0.5 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => window.open('https://wa.me/1234567890?text=Hello%20Advocate%20Umme%20Habiba,%20I%20would%20like%20to%20consult%20with%20you.', '_blank')}
+        onClick={() => window.open('https://wa.me/01721019302?text=Hello%20Advocate%20Umme%20Habiba,%20I%20would%20like%20to%20consult%20with%20you.', '_blank')}
         className="fixed bottom-20 right-4 z-40 p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#128C7E] md:bottom-4"
         aria-label="Contact on WhatsApp"
       >

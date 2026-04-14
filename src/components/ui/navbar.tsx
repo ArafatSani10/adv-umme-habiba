@@ -54,7 +54,6 @@ export default function Navbar() {
 
     updateActiveSection()
     window.addEventListener('scroll', updateActiveSection, { passive: true })
-
     return () => window.removeEventListener('scroll', updateActiveSection)
   }, [])
 
@@ -79,25 +78,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  if (!mounted) return <nav className="fixed bottom-10 left-0 right-0 z-50 flex justify-center px-4"><Skeleton className="w-137.5 h-14.5 rounded-2xl" /></nav>
+  if (!mounted) return <nav className="fixed bottom-0 md:bottom-10 left-0 right-0 z-50 flex justify-center"><Skeleton className="w-full md:w-[550px] h-16 md:rounded-2xl" /></nav>
 
   return (
-    <div className="fixed bottom-10 left-0 right-0 z-50 flex justify-center px-4">
+    <div className="fixed bottom-0 md:bottom-10 left-0 right-0 z-50 flex justify-center">
       <motion.nav 
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: isVisible ? 0 : 100, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="flex items-center justify-between gap-4 px-4 py-2 rounded-2xl border border-white/10 bg-[#0B1120]/80 backdrop-blur-xl shadow-2xl md:min-w-[550px]"
+        className="w-full md:w-auto flex items-center justify-between gap-2 md:gap-4 px-4 py-2 rounded-none md:rounded-2xl border-t md:border border-white/10 bg-background/80 backdrop-blur-xl shadow-2xl md:min-w-[550px]"
       >
         <div onClick={() => handleScroll("home")} className="cursor-pointer">
-          <motion.div className="p-2.5 bg-brand-peach/10 rounded-xl text-brand-peach">
+          <motion.div className="p-2 md:p-2.5 bg-brand-peach/10 rounded-xl text-brand-peach">
             <Scale size={20} strokeWidth={1.5} />
           </motion.div>
         </div>
 
         <div className="h-6 w-px bg-white/10" />
 
-        <div className="flex items-center gap-1 md:gap-2">
+        <div className="flex items-center gap-0.5 md:gap-2 overflow-x-auto no-scrollbar">
           {navItems.map((item) => {
             const isActive = activeSection === item.href
             return (
@@ -107,7 +106,7 @@ export default function Navbar() {
                 className="focus:outline-none"
               >
                 <motion.div
-                  className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all ${isActive ? "text-brand-peach bg-white/5" : "text-gray-400"}`}
+                  className={`flex items-center gap-2 px-2.5 md:px-3 py-2 rounded-xl transition-all ${isActive ? "text-brand-peach bg-white/5" : "text-muted-foreground"}`}
                 >
                   <span className={isActive ? "text-brand-peach" : ""}>{item.icon}</span>
                   <span className="hidden md:block text-[13px] font-medium">{item.name}</span>
@@ -119,14 +118,13 @@ export default function Navbar() {
 
         <div className="h-6 w-px bg-white/10" />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <motion.button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="p-2.5 rounded-xl bg-white/5 text-gray-400"
+            className="p-2 md:p-2.5 rounded-xl bg-white/5 text-muted-foreground"
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </motion.button>
-          {/* <button className="px-4 py-2 bg-brand-peach text-primary rounded-xl text-xs font-bold">Consult</button> */}
         </div>
       </motion.nav>
     </div>

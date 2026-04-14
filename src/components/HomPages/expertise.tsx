@@ -2,28 +2,28 @@
 
 import * as React from "react"
 import { motion, useInView } from "framer-motion"
-import { ShieldCheck, Scale, Briefcase, Users } from "lucide-react"
+import { ShieldCheck, Scale, FileText, Users, Gavel, Search } from "lucide-react"
 
 const expertiseData = [
   {
     title: "Civil Litigation",
-    desc: "Comprehensive representation in property disputes, contracts, and tort claims.",
+    desc: "Expert representation in civil disputes, property matters, and high-court litigation resolution.",
     icon: <Scale className="w-8 h-8" />,
   },
   {
-    title: "Criminal Law",
-    desc: "Robust defense strategies for white-collar crimes and criminal allegations.",
+    title: "Criminal Defense",
+    desc: "Robust defense strategies and prosecution services for criminal allegations and trials.",
     icon: <ShieldCheck className="w-8 h-8" />,
   },
   {
-    title: "Corporate Law",
-    desc: "Legal consulting for businesses, compliance, and commercial agreements.",
-    icon: <Briefcase className="w-8 h-8" />,
+    title: "Legal Research",
+    desc: "Meticulous legal research and precision drafting of contracts, writs, and legal documents.",
+    icon: <FileText className="w-8 h-8" />,
   },
   {
-    title: "Family Matters",
-    desc: "Compassionate legal guidance for divorce, custody, and inheritance issues.",
-    icon: <Users className="w-8 h-8" />,
+    title: "Client Advisory",
+    desc: "Strategic legal consultation and expert courtroom representation for complex cases.",
+    icon: <Gavel className="w-8 h-8" />,
   },
 ]
 

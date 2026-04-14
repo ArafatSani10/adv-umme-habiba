@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion'
-import { Scale, ShieldCheck, Gavel, Award } from 'lucide-react'
+import { Scale, ShieldCheck, Gavel, Award, GraduationCap } from 'lucide-react'
 
 const StatItem = ({ stat, i, isVisible }) => {
   const number = parseInt(stat.value)
@@ -44,6 +44,12 @@ export default function About() {
     { label: "Client Protection", value: "100%", icon: ShieldCheck },
   ]
 
+  const education = [
+    { degree: "L.L.B (Honour's)", year: "2020", institute: "Stamford University Bangladesh", result: "CGPA 3.06" },
+    { degree: "H.S.C", year: "2013", institute: "Barishal Board", result: "GPA 4.60" },
+    { degree: "S.S.C", year: "2011", institute: "Barishal Board", result: "GPA 4.69" },
+  ]
+
   return (
     <section
       ref={containerRef}
@@ -56,6 +62,7 @@ export default function About() {
         className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start"
       >
 
+        {/* Left Side: Image */}
         <div className="lg:col-span-5 relative group">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -88,6 +95,7 @@ export default function About() {
           </motion.div>
         </div>
 
+        {/* Right Side: Content */}
         <div className="lg:col-span-7 space-y-10">
           <div className="space-y-6">
             <motion.div
@@ -124,6 +132,35 @@ export default function About() {
               <StatItem key={i} stat={stat} i={i} isVisible={isVisible} />
             ))}
           </div>
+
+          {/* New Education Section - Subtle 3D Look */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.8 }}
+            className="space-y-6"
+          >
+            <div className="flex items-center gap-2 border-b border-brand-peach/20 pb-2 w-fit">
+              <GraduationCap className="text-brand-peach w-5 h-5" />
+              <h3 className="text-xl font-bold uppercase tracking-tight">Education</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {education.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5, scale: 1.01 }}
+                  className="p-4 rounded-sm border border-foreground/5 bg-foreground/[0.02] shadow-sm relative group overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-0 bg-brand-peach group-hover:h-full transition-all duration-300" />
+                  <p className="text-brand-peach text-[10px] font-bold">{item.year}</p>
+                  <h5 className="font-bold text-foreground text-sm uppercase mt-1 leading-tight">{item.degree}</h5>
+                  <p className="text-muted-foreground text-[10px] font-medium mt-1 leading-tight uppercase">{item.institute}</p>
+                  <p className="text-foreground/60 text-[9px] font-bold mt-2 border-t border-foreground/5 pt-2 uppercase">{item.result}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
