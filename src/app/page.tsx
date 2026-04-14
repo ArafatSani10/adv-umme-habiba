@@ -7,6 +7,7 @@ import About from "@/components/AboutSections/About"
 import Banner from "@/components/HomPages/Banner"
 import Expertise from "@/components/HomPages/expertise"
 import SuccessStories from "@/components/SuccessStories"
+import WhyChooseMe from "@/components/WhyChooseMe"
 
 export default function Home() {
   const [chatOpen, setChatOpen] = React.useState(false)
@@ -60,6 +61,10 @@ export default function Home() {
 
       <section id="about" className="min-h-screen">
         <About />
+      </section>
+
+      <section id="why-choose-me" className="min-h-screen">
+        <WhyChooseMe />
       </section>
 
       <section id="success-stories" className="min-h-screen">

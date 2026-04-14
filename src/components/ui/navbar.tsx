@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion } from "framer-motion"
-import { Moon, Sun, Home, User, Briefcase, Mail, Scale, Trophy } from "lucide-react"
+import { Moon, Sun, Home, User, Briefcase, Mail, Scale, Trophy, ShieldCheck } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Skeleton } from "./skeleton"
 
@@ -10,6 +10,7 @@ const navItems = [
   { name: "Home", href: "home", icon: <Home size={18} strokeWidth={1.5} /> },
   { name: "Expertise", href: "expertise", icon: <Briefcase size={18} strokeWidth={1.5} /> },
   { name: "About", href: "about", icon: <User size={18} strokeWidth={1.5} /> },
+  { name: "Why Choose Me", href: "why-choose-me", icon: <ShieldCheck size={18} strokeWidth={1.5} /> },
   { name: "Success", href: "success-stories", icon: <Trophy size={18} strokeWidth={1.5} /> },
   { name: "Contact", href: "contact", icon: <Mail size={18} strokeWidth={1.5} /> },
 ]
