@@ -26,8 +26,8 @@ export default function Banner() {
         return (
             <div className="relative flex min-h-screen flex-col items-center justify-center bg-background px-6">
                 <div className="space-y-4">
-                    <Skeleton className="h-16 md:h-24 w-[280px] md:w-[600px] rounded-2xl" />
-                    <Skeleton className="h-6 w-[180px] md:w-[400px] rounded-full" />
+                    <Skeleton className="h-16 md:h-24 w-70 md:w-150 rounded-2xl" />
+                    <Skeleton className="h-6 w-45 md:w-100 rounded-full" />
                 </div>
             </div>
         )
@@ -74,7 +74,7 @@ export default function Banner() {
 
             <div className="relative flex min-h-screen flex-col items-center justify-center px-6">
                 <div className="absolute inset-0 z-0 flex items-center justify-end">
-                    <div className="absolute inset-0 bg-black/[0.03] dark:hidden" />
+                    <div className="absolute inset-0 bg-black/3 dark:hidden" />
                     
                     <div className="relative h-full w-full md:w-[75%] lg:w-[65%]">
                         <Image
@@ -82,11 +82,11 @@ export default function Banner() {
                             alt="Advocate Umme Habiba"
                             fill
                             priority
-                            className="pointer-events-none object-cover md:object-contain object-center md:object-right-bottom opacity-100 saturate-[1.1] dark:opacity-[0.25]"
+                            className="pointer-events-none object-cover md:object-contain object-center md:object-bottom-right opacity-100 saturate-[1.1] dark:opacity-[0.25]"
                         />
                     </div>
                     
-                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-background via-background/60 md:via-background/20 to-transparent dark:via-background/80" />
+                    <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-background via-background/60 md:via-background/20 to-transparent dark:via-background/80" />
                 </div>
 
                 <div className="container relative z-10 mx-auto flex flex-col items-start text-left">
@@ -106,7 +106,7 @@ export default function Banner() {
                             animate={!showIntro ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.3, duration: 0.6 }}
                         >
-                            <div className="text-base md:text-xl font-sans text-muted-foreground h-[40px] md:h-[30px] flex items-center gap-2 mb-8">
+                            <div className="text-base md:text-xl font-sans text-muted-foreground h-10 md:h-7.5 flex items-center gap-2 mb-8">
                                 <span className="font-normal opacity-80 whitespace-nowrap">Advocate •</span>
                                 <span className="text-foreground font-medium">
                                     <Typewriter

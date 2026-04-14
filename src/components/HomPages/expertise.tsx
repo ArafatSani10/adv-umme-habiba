@@ -69,7 +69,7 @@ export default function Expertise() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 + idx * 0.1 }}
               whileHover={{ scale: 1.03 }}
-              className="group p-8 rounded-lg border border-foreground/10 bg-foreground/[0.02] transition-all duration-500 backdrop-blur-sm relative overflow-hidden cursor-pointer"
+              className="group p-8 rounded-lg border border-foreground/10 bg-foreground/2 transition-all duration-500 backdrop-blur-sm relative overflow-hidden cursor-pointer"
             >
               <div className="mb-6 text-brand-peach relative">
                 <motion.div
@@ -83,7 +83,7 @@ export default function Expertise() {
               <h3 className="text-xl font-semibold text-foreground mb-3 relative z-10 group-hover:text-brand-peach transition-colors">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground text-sm italic leading-relaxed relative z-10">
+              <p className="text-muted-foreground text-sm   relative z-10">
                 {item.desc}
               </p>
             </motion.div>
