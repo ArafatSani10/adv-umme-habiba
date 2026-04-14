@@ -33,7 +33,7 @@ const reasons = [
     }
 ]
 
-const Card3D: React.FC<{ reason: Reason; index: number; isInView: boolean }> = ({ reason, index, isInView }) => {
+const Card3D = ({ reason, index, isInView }: { reason: Reason; index: number; isInView: boolean }) => {
     const x = useMotionValue(0)
     const y = useMotionValue(0)
 

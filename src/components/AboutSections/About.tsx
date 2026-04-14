@@ -11,7 +11,7 @@ interface Stat {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const StatItem: React.FC<{ stat: Stat; i: number; isVisible: boolean }> = ({ stat, i, isVisible }) => {
+const StatItem = ({ stat, i, isVisible }: { stat: Stat; i: number; isVisible: boolean }) => {
   const number = parseInt(stat.value)
   const suffix = stat.value.replace(/\d+/g, '')
   const motionValue = useMotionValue(0)
