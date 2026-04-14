@@ -84,7 +84,6 @@ export default function Home() {
         <ChevronUp size={24} />
       </motion.button>
 
-      {/* WhatsApp Button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -100,7 +99,6 @@ export default function Home() {
         </svg>
       </motion.button>
 
-      {/* Chat Bot Button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -116,7 +114,6 @@ export default function Home() {
         </svg>
       </motion.button>
 
-      {/* Chat Modal */}
       {chatOpen && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
